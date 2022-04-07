@@ -1,0 +1,2 @@
+rootProject.name = "Voluntarix"
+include ':app'
