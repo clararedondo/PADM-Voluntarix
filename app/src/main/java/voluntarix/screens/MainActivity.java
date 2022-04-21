@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     HomeFragment home = new HomeFragment();
+    SearchFragment search = new SearchFragment();
+    MessagesFragment messages = new MessagesFragment();
+    ProfileFragment profile = new ProfileFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,15 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.container, home).commit();
                         return true;
-
+                    case R.id.search:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, search).commit();
+                        return true;
+                    case R.id.messages:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, messages).commit();
+                        return true;
+                    case R.id.profile:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, profile).commit();
+                        return true;
                 }
                 return false;
             }
